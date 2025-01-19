@@ -3,10 +3,10 @@ from telegram import CallbackQuery
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from SHUKLAMUSIC import YouTube, app
-from SHUKLAMUSIC.core.call import SHUKLA
-from SHUKLAMUSIC.misc import SUDOERS, db
-from SHUKLAMUSIC.utils.database import (
+from PRINCEMUSIC import YouTube, app
+from PRINCEMUSIC.core.call import PRINCE
+from PRINCEMUSIC.misc import SUDOERS, db
+from PRINCEMUSIC.utils.database import (
     get_active_chats,
     get_lang,
     get_upvote_count,
@@ -23,12 +23,12 @@ from pyrogram.errors import (
     UserAlreadyParticipant,
     UserNotParticipant,
 )
-from SHUKLAMUSIC.utils.database import get_assistant
-from SHUKLAMUSIC.utils.decorators.language import languageCB
-from SHUKLAMUSIC.utils.formatters import seconds_to_min
-from SHUKLAMUSIC.utils.inline import close_markup, stream_markup, stream_markup_timer
-from SHUKLAMUSIC.utils.stream.autoclear import auto_clean
-from SHUKLAMUSIC.utils.thumbnails import get_thumb
+from PRINCEMUSIC.utils.database import get_assistant
+from PRINCEMUSIC.utils.decorators.language import languageCB
+from PRINCEMUSIC.utils.formatters import seconds_to_min
+from PRINCEMUSIC.utils.inline import close_markup, stream_markup, stream_markup_timer
+from PRINCEMUSIC.utils.stream.autoclear import auto_clean
+from PRINCEMUSIC.utils.thumbnails import get_thumb
 from config import (
     BANNED_USERS,
     SOUNCLOUD_IMG_URL,
@@ -155,7 +155,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_1"], show_alert=True)
         await CallbackQuery.answer()
         await music_off(chat_id)
-        await SHUKLA.pause_stream(chat_id)
+        await PRINCE.pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_2"].format(mention), reply_markup=close_markup(_)
         )
@@ -164,13 +164,13 @@ async def del_back_playlist(client, CallbackQuery, _):
             return await CallbackQuery.answer(_["admin_3"], show_alert=True)
         await CallbackQuery.answer()
         await music_on(chat_id)
-        await SHUKLA.resume_stream(chat_id)
+        await PRINCE.resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
             _["admin_4"].format(mention), reply_markup=close_markup(_)
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await SHUKLA.stop_stream(chat_id)
+        await PRINCE.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_5"].format(mention), reply_markup=close_markup(_)
