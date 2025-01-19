@@ -1,5 +1,5 @@
 from enum import Enum, auto
-from SHUKLAMUSIC import app
+from PRINCEMUSIC import app
 from pyrogram.types import InlineKeyboardMarkup, Message
 from PRINCEMUSIC.utils.msg_types import button_markdown_parser
 from PRINCEMUSIC.utils.notes_func import NoteFillings
