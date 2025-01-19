@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from PRINCEMUSIC import app
-from SHUKLAMUSIC.core.call import PRINCE
+from PRINCEMUSIC.core.call import PRINCE
 from PRINCEMUSIC.utils.database import is_music_playing, music_on
 from PRINCEMUSIC.utils.decorators import AdminRightsCheck
 from PRINCEMUSIC.utils.inline import close_markup
