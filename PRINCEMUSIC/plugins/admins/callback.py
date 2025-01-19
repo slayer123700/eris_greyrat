@@ -210,7 +210,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                         ),
                         reply_markup=close_markup(_),
                     )
-                    return await SHUKLA.stop_stream(chat_id)
+                    return await PRINCE.stop_stream(chat_id)
                 except:
                     return
         else:
@@ -242,7 +242,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 image = None
             try:
-                await SHUKLA.skip_stream(chat_id, link, video=status, image=image)
+                await PRINCE.skip_stream(chat_id, link, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -278,7 +278,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             except:
                 image = None
             try:
-                await SHUKLA.skip_stream(chat_id, file_path, video=status, image=image)
+                await PRINCE.skip_stream(chat_id, file_path, video=status, image=image)
             except:
                 return await mystic.edit_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -299,7 +299,7 @@ async def del_back_playlist(client, CallbackQuery, _):
             await mystic.delete()
         elif "index_" in queued:
             try:
-                await SHUKLA.skip_stream(chat_id, videoid, video=status)
+                await PRINCE.skip_stream(chat_id, videoid, video=status)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             button = stream_markup(_, chat_id)
@@ -322,7 +322,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                 except:
                     image = None
             try:
-                await SHUKLA.skip_stream(chat_id, queued, video=status, image=image)
+                await PRINCE.skip_stream(chat_id, queued, video=status, image=image)
             except:
                 return await CallbackQuery.message.reply_text(_["call_6"])
             if videoid == "telegram":
