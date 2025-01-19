@@ -1,5 +1,5 @@
 import re
-from SHUKLAMUSIC import app
+from PRINCEMUSIC import app
 from config import BOT_USERNAME
 from PRINCEMUSIC.utils.Shukla_ban import admin_filter
 from PRINCEMUSIC.mongo.filtersdb import *
