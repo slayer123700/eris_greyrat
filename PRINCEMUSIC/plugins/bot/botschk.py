@@ -7,7 +7,7 @@ import config
 
 from ...logging import LOGGER
 
-from PRINCRMUSIC import app, userbot
+from PRINCEMUSIC import app, userbot
 from PRINCEMUSIC.core.userbot import *
 
 import asyncio
