@@ -35,27 +35,27 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("PRINCEMUSIC.plugins" + all_module)
-    LOGGER("PRINCEMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
+        importlib.import_module("ERISMUSIC.plugins" + all_module)
+    LOGGER("ERISMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
     await userbot.start()
     await PRINCE.start()
     try:
         await PRINCE.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        LOGGER("PRINCEMUSIC").error(
+        LOGGER("ERISMUSIC").error(
             "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗣𝗥𝗜𝗡𝗖𝗘 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
         )
         exit()
     except:
         pass
     await PRINCE.decorators()
-    LOGGER("PRINCEMUSIC").info(
-        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗣𝗥𝗜𝗡𝗖𝗘\n╚═════ஜ۩۞۩ஜ════╝"
+    LOGGER("ERISMUSIC").info(
+        "╔═════ஜ۩۞۩ஜ════╗\n  ☠︎︎MADE BY SLAYER\n╚═════ஜ۩۞۩ஜ════╝"
     )
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("PRINCEMUSIC").info("𝗦𝗧𝗢𝗣 𝗣𝗥𝗜𝗡𝗖𝗘 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..")
+    LOGGER("ERISMUSIC").info("𝗦𝗧𝗢𝗣 ERIS MUSIC🎻 𝗕𝗢𝗧..")
 
 
 if __name__ == "__main__":
